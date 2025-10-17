@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+  margin: 0;
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+  background: linear-gradient(90deg, #fca5a5 0%, #fde68a 50%, #bfdbfe 100%);
+}
+
+.blob {
+  position: absolute;
+  filter: blur(120px);
+  opacity: 0.28;
+  border-radius: 50%;
+  z-index: -1;
+}
+.blob1 {
+  width: 500px;
+  height: 400px;
+  top: 70px;
+  left: -150px;
+  background: #fdb6c7;
+}
+.blob2 {
+  width: 500px;
+  height: 500px;
+  top: 320px;
+  right: -160px;
+  background: #ffeabf;
+}
+.blob3 {
+  width: 380px;
+  height: 350px;
+  bottom: 20vh;
+  left: 700px;
+  background: #c0b6fd;
+}
