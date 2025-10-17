@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
 
-const Progress = require('../models/Progress'); // Your Mongoose model for progress
+const Progress = require('../models/ProgressEntry'); // Your Mongoose model for progress
 
 // Add or create new progress entry for a user
 router.post('/', async (req, res) => {
