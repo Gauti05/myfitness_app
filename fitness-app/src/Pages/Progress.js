@@ -10,7 +10,7 @@ function Progress() {
     if(!user||!user._id) return;
 
     setLoading(true);
-    fetch(`http://localhost:5000/api/progress/${user._id}`)
+    fetch(`https://myfitness-app.onrender.com/api/progress/${user._id}`)
     .then(res =>{
       if(!res.ok) throw new Error('Failed to fetch progress data');
       return res.json();

@@ -18,10 +18,10 @@ useEffect(() =>{
 const sendMessage = async () => {
   if (!message.trim() ) return;  
 try{
-const res  = await fetch('http://localhost:5000/api/chat', {
+const res  = await fetch('https://myfitness-app.onrender.com/api/chat', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ userId: user._id, message }),
+ body: JSON.stringify({ user: user._id, message, sender: user.username }),
 })
 const data = await res.json();
 setChat(prev => [...prev,data]);

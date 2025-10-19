@@ -4,6 +4,8 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+const chatRoutes = require('./routes/chat'); // Correct path to your routes file
+
 
 
 app.use(cors());
@@ -18,6 +20,9 @@ mongoose.connect(process.env.MONGO_URI)
 app.use('/api/users', require('./routes/users'));
 app.use('/api/profiles', require('./routes/profiles'));
 app.use('/api/progress', require('./routes/progress'));
+// app.use('/api/chat', require('./routes/chat'));
+app.use('/api/chat', chatRoutes);
+
 // app.use('/api/meals', require('./routes/meals'));
 // app.use('/api/workouts', require('./routes/workouts'));
 // app.use('/api/chat', require('./routes/chat'));
